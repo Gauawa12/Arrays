@@ -1,16 +1,20 @@
 
-Given an array A[] of N positive integers which can contain integers from 1 to N where elements can be repeated or can be absent from the array. Your task is to count frequency of all elements from 1 to N.
+Given an array A[] of N positive integers which can contain integers from 1 to N where elements can be repeated or can be 
+absent from the array. Your task is to count frequency of all elements from 1 to N.
 
 Note: Expected time complexity is O(n) with O(1) extra space.
 
 Input Format:
-First line of input contains an integer T denoting the number of test cases. For each test case, first line contains an integer N denoting the size of array. The second line contains N space-separated integers A1, A2, ..., AN denoting the elements of the array.
+First line of input contains an integer T denoting the number of test cases. For each test case, first line contains an
+integer N denoting the size of array. The second line contains N space-separated integers A1, A2, ..., AN denoting the
+elements of the array.
 
 Output Format:
 For each test case, output N space-separated integers denoting the frequency of each element from 1 to N.
 
 Your Task:
-You need to complete the function printfrequency and print frequency of each element. The newline is automatically added by the driver code.
+You need to complete the function printfrequency and print frequency of each element. The newline is automatically added by
+the driver code.
 
 Constraints:
 1 ≤ T ≤ 100
@@ -88,9 +92,10 @@ void printfrequency(int a[], int n)
 // Optimized Approach
 /*
 first subtract 1 from all elements to get them in range.
-Suppose a[i]=5 then add n to the a[5], so all the indexes which are absent will always be less than n, as you are adding on the go the original value can be accessed by a[a[i]%n]
+Suppose a[i]=5 then add n to the a[5], so all the indexes which are absent will always be less than n, as you are adding on
+the go the original value can be accessed by a[a[i]%n]
 Finally print by taking integer division.
-
+*/
 void printfrequency(int a[], int n)
 { 
 	for(int i=0;i<n;i++)
