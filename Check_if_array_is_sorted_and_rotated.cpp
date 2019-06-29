@@ -1,9 +1,11 @@
 
-Given an array arr[] of N distinct integers, check if this array is Sorted (non-increasing or non-decreasing) and Rotated counter-clockwise. Note that input array may be sorted in either increasing or decreasing order, then rotated.
+Given an array arr[] of N distinct integers, check if this array is Sorted (non-increasing or non-decreasing) and Rotated 
+counter-clockwise. Note that input array may be sorted in either increasing or decreasing order, then rotated.
 A sorted array is not considered as sorted and rotated, i.e., there should be at least one rotation.
 
 Input:
-The first line of input contains number of testcases T. Each testcase contains 2 lines, the first line contains N, the number of elements in array, and second line contains N space separated elements of array.
+The first line of input contains number of testcases T. Each testcase contains 2 lines, the first line contains N, the
+number of elements in array, and second line contains N space separated elements of array.
 
 Output:
 Print "Yes" if the given array is sorted and rotated, else Print "No", without Inverted commas.
@@ -62,7 +64,7 @@ bool checkRotatedAndSorted(int a[], int n){
     {
         return false;
     }
-    if(mi>ma)
+    if(mi>ma)//increasing sorted
     {
         int x=mi;
         mi--;
@@ -99,3 +101,9 @@ bool checkRotatedAndSorted(int a[], int n){
     
 }
 
+/*
+O(n)
+if the array was sorted then starting from minimum element to maximum element it should satisfy the increasing or decreasing 
+property. So find the minindex(mi) and maxindex(ma). If mi>ma it means that the array was sorted in increasing order hence use 
+modulus property to check till ma. Similarly if ma>mi it means sorted in decreasing order.
+*/
